@@ -54,9 +54,9 @@
 			#address-cells = <1>;
 			#size-cells = <1>;
 
-			ubi@340000 {
+			ubi@0 {
 				label = "ubi";
-				reg = <0x340000 0x4d00000>;
+				reg = <0x0 0x79c0000>;
 			};
 		};
 	};
