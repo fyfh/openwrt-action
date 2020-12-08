@@ -46,8 +46,7 @@ jobs:
  
     - name: Enable SSR Plus
       run: cd openwrt && sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-    - name: edit image size
-      run: cd openwrt && rm target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts && wget https://raw.githubusercontent.com/fyfh/openwrt-action/main/128m/mt7621_hiwifi_hc5962.dts -O target/linux/ramips/dts/mt7621_hiwifi_hc5962.dts && sed -i 's/32768/131072/g' target/linux/ramips/image/mt7621.mk
+      
     - name: Update feed
       run: cd openwrt && ./scripts/feeds update -a
 
