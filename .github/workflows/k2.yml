@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build lienol ssr k2
+name: Build k2
 
 on:
   release:
@@ -64,7 +64,7 @@ jobs:
 
     - name: Load custom configuration
       env:
-        CONFIG_FILE: lienol-ssr-k2.config
+        CONFIG_FILE: k2.config
         DIY_SH: diy-k2.sh
       run: |
         [ -e files ] && mv files openwrt/files
