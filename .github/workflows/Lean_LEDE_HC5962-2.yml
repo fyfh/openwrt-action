@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build Lean_LEDE_HC5962 s-m-b-3
+name: Build Lean_LEDE_HC5962 cifsd
 
 on:
   repository_dispatch:
