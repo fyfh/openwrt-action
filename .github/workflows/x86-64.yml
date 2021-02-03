@@ -61,6 +61,9 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_SH
     - name: Update feed
+      run: cd openwrt && ./scripts/feeds clean
+
+    - name: Update feed
       run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
