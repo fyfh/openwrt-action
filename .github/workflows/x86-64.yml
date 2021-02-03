@@ -60,6 +60,9 @@ jobs:
         chmod +x $DIY_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_SH
+    - name: Setup Debug Session
+      uses: fyfh/debugger-action@master
+
     - name: Update feed
       run: cd openwrt && ./scripts/feeds clean
 
