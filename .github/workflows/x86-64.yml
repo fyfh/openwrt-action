@@ -60,7 +60,13 @@ jobs:
         chmod +x $DIY_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_SH
+    - name: Update feed
+      run: cd openwrt && ./scripts/feeds update -a
 
+    - name: Install feeds
+      run: cd openwrt && ./scripts/feeds install -a
+    - name: Setup Debug Session
+      uses: fyfh/debugger-action@master
     - name: Download package
       id: package
       run: |
