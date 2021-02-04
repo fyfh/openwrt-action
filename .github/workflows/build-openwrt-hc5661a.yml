@@ -18,8 +18,8 @@ on:
       - 'hc5661a.config'
   schedule:
     - cron: 0 8 * * *
-  watch:
-    types: [started]
+#  watch:
+   # types: [started]
 jobs:
   build:
     runs-on: ubuntu-latest
