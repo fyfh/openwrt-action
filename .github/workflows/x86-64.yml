@@ -63,15 +63,6 @@ jobs:
     - name: Setup Debug Session
       uses: fyfh/debugger-action@master
 
-    - name: Update feed
-      run: cd openwrt && ./scripts/feeds clean
-
-    - name: Update feed
-      run: cd openwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
-
     - name: Download package
       id: package
       run: |
