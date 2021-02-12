@@ -51,8 +51,7 @@ jobs:
         REPO_URL: https://github.com/Lienol/openwrt
         REPO_BRANCH: 19.07
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
-    - name: Enable SSR Plus
-      run: cd openwrt && echo 'src-git helloworld https://github.com/fw876/helloworld' >> feeds.conf.default
+
     - name: add 16M config
       run: cd openwrt && rm target/linux/ramips/image/mt7620.mk && wget https://raw.githubusercontent.com/fyfh/openwrt-action/main/16m/mt7620.mk -O target/linux/ramips/image/mt7620.mk && sed -i 's/0x7b0000/0xfb0000/' target/linux/ramips/dts/PSG1218.dtsi
 
