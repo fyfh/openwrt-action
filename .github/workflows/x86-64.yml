@@ -73,8 +73,7 @@ jobs:
       run: |
         cd openwrt
         echo -e "$(nproc) thread build."
-        make -j$(nproc) || make -j1 V=s
-        echo "::set-output name=status::success"
+        make -j$(nproc) V=s
         
     - name : Upload packages
       uses: actions/upload-artifact@master
