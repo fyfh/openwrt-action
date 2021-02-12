@@ -63,3 +63,7 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-opentopd ../
 
 
 popd
+
+pushd package/community/OpenClash/luci-app-openclash/tools/po2lmo
+make && sudo make install
+popd
