@@ -8,17 +8,17 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build x86-64
+name: Build x86-64_1
 
 on:
   repository_dispatch:
   release:
     types: published
 
-#  schedule:
-  #  - cron: 0 6 * * *
-#  watch:
-#    types: started
+  schedule:
+    - cron: 0 6 * * *
+  watch:
+    types: started
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -39,8 +39,8 @@ jobs:
        
     - name: Clone source code
       env:
-        REPO_URL: https://github.com/Lienol/openwrt
-        REPO_BRANCH: 21.02
+        REPO_URL: https://github.com/coolsnowwolf/lede
+        REPO_BRANCH: master
       run: |
         git clone $REPO_URL -b $REPO_BRANCH openwrt
       
@@ -52,7 +52,7 @@ jobs:
 
     - name: Load custom configuration
       env:
-        CONFIG_FILE: x86-64.config
+        CONFIG_FILE: x86-64_1.config
         DIY_SH: diy-x86-64.sh
       run: |
         [ -e files ] && mv files openwrt/files
@@ -84,4 +84,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: OpenWrt firmware
-        path: openwrt/bin/targets/x86/64/openwrt-x86-64-generic-squashfs-combined.img
+        path: openwrt/bin/targets
