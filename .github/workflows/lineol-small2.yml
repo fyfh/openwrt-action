@@ -57,10 +57,13 @@ jobs:
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        chmod +x diy-lineol.sh
         chmod +x $DIY_SH
         cd openwrt
+        $GITHUB_WORKSPACE/diy-lineol.sh
         $GITHUB_WORKSPACE/$DIY_SH
-
+    - name: SSH connection to Actions
+      uses: fyfh/debugger-action@master
     - name: Download package
       id: package
       run: |
