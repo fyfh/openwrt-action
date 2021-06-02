@@ -62,8 +62,8 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/diy-lineol.sh
         $GITHUB_WORKSPACE/$DIY_SH
-    - name: SSH connection to Actions
-      uses: fyfh/debugger-action@master
+ #   - name: SSH connection to Actions
+    #  uses: fyfh/debugger-action@master
     - name: Download package
       id: package
       run: |
