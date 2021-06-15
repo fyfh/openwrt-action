@@ -88,11 +88,7 @@ jobs:
         name: OpenWrt firmware
         path: openwrt/bin/targets
     
-    - name: Rclone Upload
-      env:
-        RCLONE_PACKAGE: ${{ secrets.RCLONE_PACKAGE }}
-        RCLONE_FIRMWARE: ${{ secrets.RCLONE_FIRMWARE }}
-      if: env.GENERATE_STATUS == 'success' && env.UPLOAD_RCLONE == 'true' && env.RCLONE_PACKAGE != ''
+    - name: Rclone Upload   
       run: |
         cd openwrt
         curl https://rclone.org/install.sh | sudo bash
@@ -100,5 +96,5 @@ jobs:
         cat << EOF > ~/.config/rclone/rclone.conf
         ${{ secrets.RCLONE_CONFIG }}
         EOF
-        rclone copy bin/packages $RCLONE_PACKAGE:$(date +"%Y-%m-%d")/lean
-        rclone copy bin/targets $RCLONE_FIRMWARE:$(date +"%Y-%m-%d")/lean
+        rclone copy bin/packages aa:$(date +"%Y-%m-%d")/lean
+        rclone copy bin/targets aa:$(date +"%Y-%m-%d")/lean
