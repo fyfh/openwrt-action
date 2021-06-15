@@ -94,11 +94,11 @@ jobs:
           RCLONE_FIRMWARE: ${{ secrets.RCLONE_FIRMWARE }}
         if: env.GENERATE_STATUS == 'success' && env.UPLOAD_RCLONE == 'true' && env.RCLONE_PACKAGE != ''
         run: |
-          cd $OPENWRTROOT
+          cd openwrt
           curl https://rclone.org/install.sh | sudo bash
           mkdir -p ~/.config/rclone/
           cat << EOF > ~/.config/rclone/rclone.conf
           ${{ secrets.RCLONE_CONFIG }}
           EOF
-          rclone copy bin $RCLONE_PACKAGE:$(date +"%Y-%m-%d")/lean --filter-from ../data/rclone/upload-rule.txt
-          rclone copy bin/targets $RCLONE_FIRMWARE:$(date +"%Y-%m-%d")/lean --exclude "packages/"
+          rclone copy bin $RCLONE_PACKAGE:$(date +"%Y-%m-%d")/lean
+          rclone copy bin/targets $RCLONE_FIRMWARE:$(date +"%Y-%m-%d")/lean
