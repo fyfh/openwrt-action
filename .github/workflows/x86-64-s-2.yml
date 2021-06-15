@@ -73,6 +73,7 @@ jobs:
 
     - name: Compile firmware
       run: |
+        cd openwrt
         make -j$(nproc) || make -j1 V=s
         echo "======================="
         echo "Space usage:"
