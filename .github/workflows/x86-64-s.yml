@@ -100,5 +100,5 @@ jobs:
         cat << EOF > ~/.config/rclone/rclone.conf
         ${{ secrets.RCLONE_CONFIG }}
         EOF
-        rclone copy bin $RCLONE_PACKAGE:$(date +"%Y-%m-%d")/lean
+        rclone copy bin/packages $RCLONE_PACKAGE:$(date +"%Y-%m-%d")/lean
         rclone copy bin/targets $RCLONE_FIRMWARE:$(date +"%Y-%m-%d")/lean
