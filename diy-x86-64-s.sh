@@ -34,8 +34,8 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-jd-dailybonus
 #svn co https://github.com/kenzok8/openwrt-packages/trunk/AdGuardHome ../AdGuardHome
 
 # Add smartdns
-#svn co https://github.com/pymumu/smartdns/trunk/package/openwrt ../smartdns
-#svn co https://github.com/project-openwrt/openwrt/trunk/package/ntlf9t/luci-app-smartdns ../luci-app-smartdns
+svn co https://github.com/pymumu/smartdns/trunk/package/openwrt ../smartdns
+svn co https://github.com/project-openwrt/openwrt/trunk/package/ntlf9t/luci-app-smartdns ../luci-app-smartdns
 
 # Add OpenClash
 #git clone --depth=1 -b master https://github.com/vernesong/OpenClash
