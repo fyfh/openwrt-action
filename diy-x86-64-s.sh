@@ -25,6 +25,15 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 git clone --depth=1 https://github.com/jerrykuku/luci-app-jd-dailybonus
 
+# ADD luci-app-fileassistant
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-fileassistant ../luci-app-fileassistant
+
+# ADD luci-app-filebrowser
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser ../luci-app-filebrowser
+
+# ADD luci-app-syncthing
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-syncthing ../luci-app-syncthing
+
 # Add luci-app-vssr <M>
 #git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
