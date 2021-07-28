@@ -46,6 +46,8 @@ svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-syncthing ../luc
 # Add luci-app-vssr <M>
 #git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
+# add luci-app-godproxy
+git clone https://github.com/project-lede/luci-app-godproxy
 
 # Add luci-app-adguardhome
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome ../luci-app-adguardhome
