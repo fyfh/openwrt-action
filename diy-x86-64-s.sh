@@ -26,8 +26,11 @@ pushd package/community
 # git clone --depth=1 https://github.com/Lienol/openwrt-package
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
-# test
-git clone https://github.com/linkease/nas-packages.git
+# add ddns.to
+svn co https://github.com/linkease/nas-packages/trunk/luci/luci-app-ddnsto
+svn co https://github.com/linkease/nas-packages/trunk/luci/luci-app-linkease
+svn co https://github.com/linkease/nas-packages/trunk/network/services/ddnsto
+svn co https://github.com/linkease/nas-packages/trunk/network/services/linkease
 
 git clone --depth=1 https://github.com/jerrykuku/luci-app-jd-dailybonus
 
