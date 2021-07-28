@@ -12,9 +12,9 @@ sed -i 's/192.168.1.1/192.168.99.1/g' package/base-files/files/bin/config_genera
 #git clone https://github.com/kenzok8/small package/small
 #git clone https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
 # add ddns.to
-echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
-./scripts/feeds update nas
-./scripts/feeds install -a -p nas
+#echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
+#./scripts/feeds update nas
+#./scripts/feeds install -a -p nas
 # Add luci-app-ssr-plus
 pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld
@@ -26,6 +26,8 @@ pushd package/community
 # git clone --depth=1 https://github.com/Lienol/openwrt-package
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
+# test
+git clone https://github.com/linkease/nas-packages.git
 
 git clone --depth=1 https://github.com/jerrykuku/luci-app-jd-dailybonus
 
