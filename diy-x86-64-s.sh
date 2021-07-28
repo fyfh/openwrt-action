@@ -51,7 +51,8 @@ git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 # add luci-app-godproxy
 git clone https://github.com/project-lede/luci-app-godproxy
-
+# add luci-app-serverchan
+git clone https://github.com/tty228/luci-app-serverchan
 # Add luci-app-adguardhome
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome ../luci-app-adguardhome
 svn co https://github.com/kenzok8/openwrt-packages/trunk/AdGuardHome ../AdGuardHome
