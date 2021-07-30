@@ -15,8 +15,8 @@ on:
   release:
     types: published
 
-#  schedule:
-#    - cron: 0 6 * * *
+  #schedule:
+  #  - cron: 0 0 */14 * *
   watch:
     types: started
 jobs:
@@ -70,13 +70,12 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
-    - name: Compile firmware
+    - name: Build
       run: |
         cd openwrt
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
-          
+        
     - name : Upload packages
       uses: actions/upload-artifact@master
       with:
@@ -88,4 +87,3 @@ jobs:
       with:
         name: OpenWrt firmware
         path: openwrt/bin/targets
-   
