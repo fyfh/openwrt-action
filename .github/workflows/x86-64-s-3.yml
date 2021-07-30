@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build x86-64 small-3
+name: Build x86-64 small
 
 on:
   repository_dispatch:
@@ -16,7 +16,7 @@ on:
     types: published
 
   #schedule:
-  #  - cron: 0 0 */14 * *
+    #- cron: 0 0 */14 * *
   watch:
     types: started
 jobs:
@@ -60,7 +60,8 @@ jobs:
         chmod +x $DIY_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_SH
-
+ #   - name: SSH connection to Actions
+  #    uses: fyfh/debugger-action@master
     - name: Download package
       id: package
       run: |
