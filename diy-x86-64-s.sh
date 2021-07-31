@@ -62,7 +62,7 @@ svn co https://github.com/pymumu/smartdns/trunk/package/openwrt ../smartdns
 svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ../luci-app-smartdns
 
 # Add OpenClash
-#git clone --depth=1 -b master https://github.com/vernesong/OpenClash
+git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
 # Add clash
 #svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-clash ../luci-app-clash
