@@ -66,7 +66,7 @@ git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 
 # Add clash
 #svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-clash ../luci-app-clash
-svn co https://github.com/frainzy1477/luci-app-clash/trunk/ ../luci-app-clash
+svn co https://github.com/frainzy1477/luci-app-clash/branches/test/ ../luci-app-clash
 # Add aliddns
 #svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns ../luci-app-aliddns
 
