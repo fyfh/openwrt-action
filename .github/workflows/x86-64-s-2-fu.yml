@@ -52,7 +52,7 @@ jobs:
 
     - name: Load custom configuration
       env:
-        CONFIG_FILE: x86-64-s.config
+        CONFIG_FILE: x86-64-s-fu.config
         DIY_SH: diy-x86-64-s.sh
       run: |
         [ -e files ] && mv files openwrt/files
