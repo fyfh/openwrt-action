@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build x86-64 small-2-fu
+name: Build x86-64 small-2-fu ipv6
 
 on:
   repository_dispatch:
