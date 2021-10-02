@@ -15,8 +15,8 @@ on:
   release:
     types: published
 
-  #schedule:
-  #  - cron: 0 0 */14 * *
+  schedule:
+    - cron: 0 0 */14 * *
  # watch:
   #  types: started
 jobs:
