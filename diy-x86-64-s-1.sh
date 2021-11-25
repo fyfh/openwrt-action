@@ -13,9 +13,9 @@ sed -i 's/192.168.1.1/192.168.99.1/g' package/base-files/files/bin/config_genera
 #git clone https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
 # add ddns.to
 #echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
-echo 'src-git dockerman https://github.com/lisaac/luci-app-dockerman' >> feeds.conf.default
-./scripts/feeds update -a
-./scripts/feeds install -a
+#echo 'src-git dockerman https://github.com/lisaac/luci-app-dockerman' >> feeds.conf.default
+#./scripts/feeds update -a
+#./scripts/feeds install -a
 # Add luci-app-ssr-plus
 pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld
