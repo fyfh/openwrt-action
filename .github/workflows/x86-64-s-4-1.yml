@@ -24,7 +24,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: x86-64-s-1-ipv6.config
+  CONFIG_FILE: x86-64-s-1.config
   DIY_P1_SH: diy-dockerman.sh
   DIY_P2_SH: diy-x86-64-s-1.sh
   UPLOAD_BIN_DIR: false
