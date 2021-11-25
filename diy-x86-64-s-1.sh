@@ -43,10 +43,8 @@ svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser ../l
 # ADD luci-app-syncthing
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-syncthing ../luci-app-syncthing
 # add docker
-rm -rf ../lean/luci-app-docker
-rm -rf ../lean/luci-lib-docker
 git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+
 # Add luci-app-vssr <M>
 #git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
