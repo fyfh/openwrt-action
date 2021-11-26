@@ -17,19 +17,6 @@ sed -i 's/192.168.1.1/192.168.99.1/g' package/base-files/files/bin/config_genera
 #./scripts/feeds update -a
 #./scripts/feeds install -a
 # Add luci-app-ssr-plus
-rm -rf package/lean/luci-app-docker
-rm -rf ./feeds/packages/utils/dockerd 
-rm -rf ./package/feeds/packages/dockerd
-rm -rf ./feeds/packages/utils/docker
-rm -rf ./package/feeds/packages/docker
-pushd feeds/packages/utils
-svn co https://github.com/openwrt/packages/trunk/utils/dockerd 
-svn co https://github.com/openwrt/packages/trunk/utils/docker
-popd
-pushd package/feeds/packages
-svn co https://github.com/openwrt/packages/trunk/utils/dockerd 
-svn co https://github.com/openwrt/packages/trunk/utils/docker
-popd
 pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld
 popd
