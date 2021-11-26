@@ -9,4 +9,3 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 echo 'src-git dockerman https://github.com/lisaac/luci-app-dockerman' >> feeds.conf.default
-echo 'src-svn dockerd https://github.com/openwrt/packages/trunk/utils/dockerd' >> feeds.conf.default
