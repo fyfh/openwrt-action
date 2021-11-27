@@ -60,6 +60,8 @@ jobs:
         chmod +x $DIY_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_SH
+    - name: SSH connection to Actions
+      uses: P3TERX/ssh2actions@v1.0.0
     - name: Download package
       id: package
       run: |
