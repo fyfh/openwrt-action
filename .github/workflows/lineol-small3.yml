@@ -49,7 +49,7 @@ jobs:
     - name: Load custom configuration
       env:
         CONFIG_FILE: x86-64-lineol.config
-        DIY_SH: diy-x86-64.sh
+        DIY_SH: diy-x86-64-li.sh
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
