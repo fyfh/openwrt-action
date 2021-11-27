@@ -72,12 +72,6 @@ jobs:
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
         
-    - name : Upload packages
-      uses: actions/upload-artifact@master
-      with:
-        name: OpenWrt packages
-        path: openwrt/bin/packages
-
     - name : Upload targets
       uses: actions/upload-artifact@master
       with:
