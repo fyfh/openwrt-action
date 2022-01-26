@@ -46,7 +46,13 @@ jobs:
  
     - name: Enable SSR Plus
       run: cd openwrt && sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-      
+
+    - name: run before it
+      run: |
+        cd openwrt
+        sed -i '/routing/d' feeds.conf.default
+        echo "src-git routing https://git.openwrt.org/feed/routing.git^a7b79a1d4fce4f443854115ee4b2ed2aafba5c06" >> feeds.conf.default
+
     - name: Update feed
       run: cd openwrt && ./scripts/feeds update -a
 
